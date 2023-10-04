@@ -1,0 +1,200 @@
+//admin register
+
+//client1 login token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImNsaWVudDEiLCJvcmciOiJvcmcxIiwiZGVwYXJ0bWVudCI6ImRlcGFydG1lbnQxIiwibXNwIjoiT3JnMU1TUCIsImlhdCI6MTY5NTExNTQ3MH0.D2KpOHpCQPTU8kTqgxBXIHc9XUO7Y5G_MS6GWSBqKQE
+
+//client2 login token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImNsaWVudDIiLCJvcmciOiJvcmcxIiwiZGVwYXJ0bWVudCI6ImRlcGFydG1lbnQxIiwibXNwIjoiT3JnMU1TUCIsImlhdCI6MTY5NTExNTUwNn0.UIOxz7i5r5Dpvkf5Ldzb6uxNwof81qck9QnalTUt1XI
+
+{
+    "org" : "org1",
+    "msp" : "Org1MSP"
+}
+
+//client register
+
+{
+    "userName": "client1",
+    "org": "org1",
+    "department": "department1",
+    "msp": "Org1MSP",
+    "role": "SuperClient"
+}
+
+{
+    "userName": "client2",
+    "org": "org1",
+    "department": "department1",
+    "msp": "Org1MSP",
+    "role": "SuperClient"
+}
+
+//user creation
+
+{
+    "arg": {
+        "id": "client1",
+        "name": "John Doe",
+        "gender": "Male",
+        "dob": "1990-05-15",
+        "address": "123 Main Street, Cityville, USA",
+        "contact": "john@example.com"
+    }
+}
+
+{
+    "arg": {
+        "id": "client2",
+        "name": "Jane Smith",
+        "gender": "Female",
+        "dob": "1985-09-28",
+        "address": "456 Elm Avenue, Townsville, USA",
+        "contact": "jane@example.com"
+    }
+}
+
+//locker creation
+
+{
+    "arg": {
+        "id": "locker101",
+        "userId": "1",
+        "storageSize": "1000",
+        "usedStorage": "250",
+        "availableStorage": "750"
+    }
+}
+
+//records creation
+
+{
+    "arg" : {
+  "id": "201",
+  "lockerId": "locker101",
+  "userId": "client1",
+  "createdAt": "2023-01-15T10:30:00Z",
+  "title": "Annual Checkup",
+  "hospital": "City Medical Center",
+  "visitPurpose": "Routine checkup",
+  "description": "General health assessment and blood tests.",
+  "typeTag": "Checkup"
+    }
+}
+
+{
+  "arg": {
+    "id": "202",
+    "lockerId": "locker101",
+    "userId": "client1",
+    "createdAt": "2023-03-20T14:45:00Z",
+    "title": "Dental Cleaning",
+    "hospital": "Smile Dental Clinic",
+    "visitPurpose": "Routine dental cleaning",
+    "description": "Teeth cleaning and oral examination.",
+    "typeTag": "Dental"
+  }
+}
+
+{
+  "arg": {
+    "id": "203",
+    "lockerId": "locker101",
+    "userId": "client1",
+    "createdAt": "2023-02-10T11:15:00Z",
+    "title": "X-ray and Consultation",
+    "hospital": "Radiance Medical Center",
+    "visitPurpose": "Investigate persistent pain",
+    "description": "X-ray of the affected area and consultation with a specialist.",
+    "typeTag": "Diagnosis"
+  }
+}
+
+
+{
+  "arg": {
+    "id": "204",
+    "lockerId": "locker101",
+    "userId": "client1",
+    "createdAt": "2023-04-05T09:00:00Z",
+    "title": "Flu Vaccination",
+    "hospital": "Community Health Clinic",
+    "visitPurpose": "Seasonal flu vaccination",
+    "description": "Received the annual flu vaccine.",
+    "typeTag": "Vaccination"
+  }
+}
+
+
+{
+  "arg": {
+    "id": "205",
+    "lockerId": "locker101",
+    "userId": "client1",
+    "createdAt": "2023-03-10T16:20:00Z",
+    "title": "Allergy Consultation",
+    "hospital": "Allergy & Immunology Center",
+    "visitPurpose": "Identify allergens",
+    "description": "Discussion about allergic reactions and possible triggers.",
+    "typeTag": "Consultation"
+  }
+}
+
+{
+  "arg": {
+    "id": "206",
+    "lockerId": "locker101",
+    "userId": "client1",
+    "createdAt": "2023-05-12T13:10:00Z",
+    "title": "Prescription Refill",
+    "hospital": "Community Health Clinic",
+    "visitPurpose": "Refill of regular medication",
+    "description": "Renewed prescription for daily medication.",
+    "typeTag": "Medication"
+  }
+}
+
+//record updatedHealthRecordProperties
+
+{
+  "arg": {
+    "id": "201",
+    "lockerId": "locker101",
+    "userId": "client1",
+    "createdAt": "2023-03-20T14:45:00Z",
+    "title": "Emergency Surgery",
+    "hospital": "City Medical Center",
+    "visitPurpose": "Urgent surgical procedure",
+    "description": "Appendectomy due to acute appendicitis.",
+    "typeTag": "Surgery"
+  }
+}
+
+//shareToken 
+
+{
+  "arg": {
+    "recordId": "201",
+    "lockerId": "locker101",
+    "userId": "client1",
+    "recipientId": "client2",
+    "salt": "xG2&fP5%mC",
+    "createdAt": "1678254820",
+    "expiryAt": "1679181220",
+    "accessType": "Read"
+  }
+}
+
+{
+  "arg": {
+    "recordId": "202",
+    "lockerId": "locker101",
+    "userId": "client1",
+    "recipientId": "client2",
+    "salt": "xG2&fP5%mC",
+    "createdAt": "1678254820",
+    "expiryAt": "1698960000", 
+    "accessType": "Read"
+  }
+}
+
+

@@ -1,0 +1,35 @@
+{
+    "name": "asset-transfer-basic",
+    "version": "1.0.0",
+    "description": "Asset-transfer-basic application implemented in JavaScript",
+    "engines": {
+        "node": ">=14.14",
+        "npm": ">=6"
+    },
+    "scripts": {
+        "lint": "eslint *.js",
+        "pretest": "npm run lint",
+        "start": "node organease-app.js"
+    },
+    "engineStrict": true,
+    "author": "Hyperledger",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "@aws-sdk/client-s3": "^3.421.0",
+        "@aws-sdk/s3-request-presigner": "^3.421.0",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "fabric-ca-client": "^2.2.4",
+        "fabric-network": "^2.2.4",
+        "jsonwebtoken": "^9.0.2",
+        "multer": "^1.4.5-lts.1",
+        "multer-s3": "^3.0.1",
+        "nodemon": "^3.0.1",
+        "passport": "^0.6.0",
+        "passport-jwt": "^4.0.1",
+        "uuid": "^9.0.1"
+    },
+    "devDependencies": {
+        "eslint": "^7.32.0"
+    }
+}
