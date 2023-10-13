@@ -16,7 +16,7 @@ function prettyJSONString(inputString) {
     return inputString;
   }
 }
-async function initContract(clientName, org, msp, department) {
+async function initContract(clientName, org, msp, department) {-
   console.log(`\n--> Fabric client user & Gateway init: Using ${clientName} identity to ${msp} Peer and department ${department}`);
 
   const ccp = buildCCP(org);

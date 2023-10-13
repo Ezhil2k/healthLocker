@@ -40,8 +40,6 @@ const upload = multer({
   fileFilter
 })
 
-
-
 router.post('/:userId/:lockerId/createRecord', upload.single("file"), async (req, res) => {
   try {
 
